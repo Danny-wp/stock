@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">股票提醒</string>
+    
+    <!-- 底部导航 -->
+    <string name="nav_home">股票</string>
+    <string name="nav_favorites">收藏</string>
+    <string name="nav_add">添加</string>
+    <string name="nav_settings">设置</string>
+    
+    <!-- 主页面 -->
+    <string name="refresh">刷新</string>
+    <string name="no_stocks">未添加任何股票</string>
+    <string name="add_stock">添加股票</string>
+    
+    <!-- 收藏页面 -->
+    <string name="no_favorites">没有收藏的股票</string>
+    
+    <!-- 添加股票页面 -->
+    <string name="search_hint">输入股票代码或名称</string>
+    <string name="search">搜索</string>
+    <string name="searching">正在搜索...</string>
+    <string name="no_results">未找到结果</string>
+    
+    <!-- 股票详情 -->
+    <string name="stock_detail">股票详情</string>
+    <string name="current_price">当前价格</string>
+    <string name="purchase_price">买入价格</string>
+    <string name="target_high">目标卖出价</string>
+    <string name="target_low">目标买入价</string>
+    <string name="up_percent">涨幅提醒(%)</string>
+    <string name="down_percent">跌幅提醒(%)</string>
+    <string name="notification">开启通知</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="favorite">收藏</string>
+    <string name="shares">持有数量</string>
+    <string name="notes">备注</string>
+    
+    <!-- 设置页面 -->
+    <string name="update_interval">更新间隔</string>
+    <string name="api_key">API密钥</string>
+    <string name="version">版本</string>
+    <string name="notifications">通知</string>
+    
+    <!-- 对话框 -->
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="minutes_15">15分钟</string>
+    <string name="minutes_30">30分钟</string>
+    <string name="minutes_60">1小时</string>
+    <string name="minutes_120">2小时</string>
+</resources> 
