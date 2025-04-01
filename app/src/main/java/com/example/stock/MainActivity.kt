@@ -22,50 +22,38 @@ class MainActivity : AppCompatActivity() {
     
     private val viewModel: MainViewModel by viewModels()
     
+    private lateinit var bottomNav: BottomNavigationView
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-        setupBottomNavigation()
+        bottomNav = findViewById(R.id.bottom_navigation)
+        bottomNav.setOnItemSelectedListener { item ->
+            var fragment: Fragment? = null
+            when (item.itemId) {
+                R.id.nav_home -> fragment = HomeFragment()
+                R.id.nav_favorites -> fragment = FavoritesFragment()
+                R.id.nav_add -> fragment = AddStockFragment()
+                R.id.nav_settings -> fragment = SettingsFragment()
+            }
+            
+            if (fragment != null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit()
+                return@setOnItemSelectedListener true
+            }
+            false
+        }
         
-        // 如果是新打开的应用，默认显示首页
+        // 默认显示主页
         if (savedInstanceState == null) {
-            showFragment(HomeFragment())
+            bottomNav.selectedItemId = R.id.nav_home
         }
         
         // 启动后台服务
         startPriceCheckService()
-    }
-    
-    private fun setupBottomNavigation() {
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    showFragment(HomeFragment())
-                    true
-                }
-                R.id.nav_favorites -> {
-                    showFragment(FavoritesFragment())
-                    true
-                }
-                R.id.nav_add -> {
-                    showFragment(AddStockFragment())
-                    true
-                }
-                R.id.nav_settings -> {
-                    showFragment(SettingsFragment())
-                    true
-                }
-                else -> false
-            }
-        }
-    }
-    
-    private fun showFragment(fragment: Fragment) {
-        supportFragmentManager.commit {
-            replace(R.id.fragment_container, fragment)
-        }
     }
     
     private fun startPriceCheckService() {

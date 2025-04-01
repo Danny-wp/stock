@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_settings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enable_notifications_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/enable_notifications"
+        app:layout_constraintEnd_toStartOf="@+id/enable_notifications_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <Switch
+        android:id="@+id/enable_notifications_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/enable_notifications_label"
+        app:layout_constraintBottom_toBottomOf="@+id/enable_notifications_label" />
+
+    <TextView
+        android:id="@+id/price_alert_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/price_target_alerts"
+        app:layout_constraintEnd_toStartOf="@+id/price_alert_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enable_notifications_label" />
+
+    <Switch
+        android:id="@+id/price_alert_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price_alert_label"
+        app:layout_constraintBottom_toBottomOf="@+id/price_alert_label" />
+
+    <TextView
+        android:id="@+id/percent_alert_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/percent_change_alerts"
+        app:layout_constraintEnd_toStartOf="@+id/percent_alert_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_alert_label" />
+
+    <Switch
+        android:id="@+id/percent_alert_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/percent_alert_label"
+        app:layout_constraintBottom_toBottomOf="@+id/percent_alert_label" />
+
+    <TextView
+        android:id="@+id/news_alert_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/news_alerts"
+        app:layout_constraintEnd_toStartOf="@+id/news_alert_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percent_alert_label" />
+
+    <Switch
+        android:id="@+id/news_alert_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/news_alert_label"
+        app:layout_constraintBottom_toBottomOf="@+id/news_alert_label" />
+
+    <TextView
+        android:id="@+id/do_not_disturb_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/do_not_disturb"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/news_alert_label" />
+
+    <TextView
+        android:id="@+id/from_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/do_not_disturb_label" />
+
+    <TextView
+        android:id="@+id/from_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_time_selector"
+        android:padding="8dp"
+        android:text="22:00"
+        app:layout_constraintStart_toEndOf="@+id/from_time_label"
+        app:layout_constraintTop_toTopOf="@+id/from_time_label"
+        app:layout_constraintBottom_toBottomOf="@+id/from_time_label" />
+
+    <TextView
+        android:id="@+id/to_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/to"
+        app:layout_constraintStart_toEndOf="@+id/from_time_text"
+        app:layout_constraintTop_toTopOf="@+id/from_time_label" />
+
+    <TextView
+        android:id="@+id/to_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_time_selector"
+        android:padding="8dp"
+        android:text="08:00"
+        app:layout_constraintStart_toEndOf="@+id/to_time_label"
+        app:layout_constraintTop_toTopOf="@+id/to_time_label"
+        app:layout_constraintBottom_toBottomOf="@+id/to_time_label" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_time_label" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="androidx.core.widget.NestedScrollView">
+            <attribute name="android:fillViewport">
+                <data type="boolean"/>
+            </attribute>
+            <attribute name="android:layout_height">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="android:layout_width">
+                <data type="NCName"/>
+            </attribute>
+            <ref name="androidx.constraintlayout.widget.ConstraintLayout"/>
+        </element>
+    </start>
+    <define name="androidx.constraintlayout.widget.ConstraintLayout">
+        <element name="androidx.constraintlayout.widget.ConstraintLayout">
+            <attribute name="android:layout_height">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="android:layout_width">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="android:padding">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <zeroOrMore>
+                <choice>
+                    <element name="CheckBox">
+                        <attribute name="app:layout_constraintBottom_toBottomOf"/>
+                        <attribute name="app:layout_constraintEnd_toEndOf">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="app:layout_constraintTop_toTopOf"/>
+                        <attribute name="android:button"/>
+                        <attribute name="android:id"/>
+                        <attribute name="android:layout_height">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="android:layout_width">
+                            <data type="NCName"/>
+                        </attribute>
+                    </element>
+                    <element name="TextView">
+                        <optional>
+                            <attribute name="app:layout_constraintBottom_toBottomOf"/>
+                        </optional>
+                        <optional>
+                            <attribute name="app:layout_constraintEnd_toStartOf"/>
+                        </optional>
+                        <optional>
+                            <attribute name="app:layout_constraintStart_toEndOf"/>
+                        </optional>
+                        <optional>
+                            <attribute name="app:layout_constraintStart_toStartOf">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="app:layout_constraintTop_toBottomOf"/>
+                        </optional>
+                        <optional>
+                            <attribute name="app:layout_constraintTop_toTopOf"/>
+                        </optional>
+                        <attribute name="android:id"/>
+                        <attribute name="android:layout_height">
+                            <data type="NCName"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="android:layout_marginStart">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="android:layout_marginTop">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="android:layout_width">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="android:text"/>
+                        </optional>
+                        <optional>
+                            <attribute name="android:textSize">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="android:textStyle">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="tools:text"/>
+                        </optional>
+                        <optional>
+                            <attribute name="tools:textColor"/>
+                        </optional>
+                    </element>
+                    <element name="androidx.cardview.widget.CardView">
+                        <attribute name="app:cardCornerRadius">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="app:cardElevation">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="app:layout_constraintBottom_toBottomOf">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="app:layout_constraintTop_toBottomOf"/>
+                        <optional>
+                            <attribute name="app:layout_constraintVertical_bias">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="android:id"/>
+                        <attribute name="android:layout_height">
+                            <data type="NCName"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="android:layout_marginBottom">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="android:layout_marginTop">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="android:layout_width">
+                            <data type="NCName"/>
+                        </attribute>
+                        <ref name="androidx.constraintlayout.widget.ConstraintLayout"/>
+                    </element>
+                </choice>
+            </zeroOrMore>
+            <optional>
+                <choice>
+                    <element name="Button">
+                        <optional>
+                            <attribute name="style"/>
+                        </optional>
+                        <attribute name="app:layout_constraintEnd_toEndOf">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="app:layout_constraintTop_toBottomOf"/>
+                        <attribute name="android:id"/>
+                        <attribute name="android:layout_height">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="android:layout_marginTop">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="android:layout_width">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="android:text"/>
+                    </element>
+                    <group>
+                        <element name="com.github.mikephil.charting.charts.LineChart">
+                            <attribute name="app:layout_constraintTop_toBottomOf"/>
+                            <attribute name="android:id"/>
+                            <attribute name="android:layout_height">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                            <attribute name="android:layout_marginTop">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                            <attribute name="android:layout_width">
+                                <data type="NCName"/>
+                            </attribute>
+                        </element>
+                        <element name="RadioGroup">
+                            <attribute name="app:layout_constraintTop_toBottomOf"/>
+                            <attribute name="android:id"/>
+                            <attribute name="android:layout_height">
+                                <data type="NCName"/>
+                            </attribute>
+                            <attribute name="android:layout_marginTop">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                            <attribute name="android:layout_width">
+                                <data type="NCName"/>
+                            </attribute>
+                            <attribute name="android:orientation">
+                                <data type="NCName"/>
+                            </attribute>
+                            <oneOrMore>
+                                <element name="RadioButton">
+                                    <optional>
+                                        <attribute name="android:checked">
+                                            <data type="boolean"/>
+                                        </attribute>
+                                    </optional>
+                                    <attribute name="android:id"/>
+                                    <attribute name="android:layout_height">
+                                        <data type="NCName"/>
+                                    </attribute>
+                                    <attribute name="android:layout_weight">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="android:layout_width">
+                                        <data type="NMTOKEN"/>
+                                    </attribute>
+                                    <attribute name="android:text"/>
+                                </element>
+                            </oneOrMore>
+                        </element>
+                    </group>
+                </choice>
+            </optional>
+        </element>
+    </define>
+</grammar>

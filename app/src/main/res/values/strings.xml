@@ -36,12 +36,45 @@
     <string name="favorite">收藏</string>
     <string name="shares">持有数量</string>
     <string name="notes">备注</string>
+    <string name="edit">编辑</string>
+    <string name="holding_info">持仓信息</string>
+    <string name="profit_loss">盈亏</string>
+    <string name="total_value">总价值</string>
+    <string name="price_chart">价格走势</string>
+    <string name="price_alerts">价格提醒</string>
+    <string name="edit_alerts">编辑提醒</string>
+    <string name="percent_alerts">百分比提醒</string>
+    <string name="edit_notes">编辑备注</string>
+    <string name="notes_hint">输入您对这支股票的看法或分析...</string>
+    <string name="all">全部</string>
     
     <!-- 设置页面 -->
     <string name="update_interval">更新间隔</string>
     <string name="api_key">API密钥</string>
     <string name="version">版本</string>
     <string name="notifications">通知</string>
+    <string name="notification_settings">通知设置</string>
+    <string name="enable_notifications">启用通知</string>
+    <string name="price_target_alerts">价格目标提醒</string>
+    <string name="percent_change_alerts">价格变动百分比提醒</string>
+    <string name="news_alerts">新闻提醒</string>
+    <string name="do_not_disturb">免打扰时段</string>
+    <string name="from">从</string>
+    <string name="to">到</string>
+    <string name="update_interval_description">选择股票数据的自动更新频率。更新频率越高，消耗的数据和电池越多。</string>
+    <string name="update_interval_warning">较高频率的更新可能导致API调用次数超限。</string>
+    <string name="every_1_minute">每分钟</string>
+    <string name="every_5_minutes">每5分钟</string>
+    <string name="every_15_minutes">每15分钟</string>
+    <string name="every_30_minutes">每30分钟</string>
+    <string name="every_1_hour">每小时</string>
+    <string name="every_2_hours">每2小时</string>
+    <string name="manual_only">仅手动更新</string>
+    <string name="api_key_settings">API密钥设置</string>
+    <string name="api_key_description">输入您从Alpha Vantage获取的API密钥，用于获取股票数据。</string>
+    <string name="get_api_key">获取API密钥</string>
+    <string name="api_key_warning">API密钥是保密的，请勿分享给他人。免费API密钥每天有调用次数限制。</string>
+    <string name="test_api_key">测试API密钥</string>
     
     <!-- 对话框 -->
     <string name="cancel">取消</string>
